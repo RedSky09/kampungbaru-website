@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+select option {
+    color: #1f2937; /* text-gray-800 */
+}
+
+select option:disabled {
+    color: #9ca3af; /* text-gray-400 */
+}
