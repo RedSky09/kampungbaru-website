@@ -1,59 +1,178 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## 📌 Overview
+
+This project is the official digital platform for Kampung Baru Subdistrict Office.  
+It provides public information services and administrative document submission for residents.
+
+The application is developed using the Laravel framework and follows modern web development standards.
+
+---
+
+## 📸 Application Preview
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="screenshots/homepage.png" width="900">
 </p>
 
-## About Laravel
+## 🚀 Main Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Public information portal
+- Online document submission system
+- Administrative dashboard (Filament)
+- Secure authentication
+- File upload handling
+- Responsive UI design
+- Production-ready deployment
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠 Built With
 
-## Learning Laravel
+![PHP](https://img.shields.io/badge/PHP-8%2B-777BB4?logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-Framework-FF2D20?logo=laravel&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=white)
+![Filament](https://img.shields.io/badge/Filament-AdminPanel-F59E0B)
+![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white)
+![Cloudflare (DNS & Security Layer)](https://img.shields.io/badge/Cloudflare-Security-F38020?logo=cloudflare&logoColor=white)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📋 System Requirements
 
-## Laravel Sponsors
+- PHP 8.1 or higher
+- Composer
+- MySQL / MariaDB
+- Node.js & NPM (if compiling assets)
+- Web Server (Nginx / Apache)
+- Docker (optional for containerized setup)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ⚙️ Installation
 
-### Premium Partners
+### 1️⃣ Clone Repository
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```
+git clone https://github.com/RedSky09/kampungbaru-website.git
+cd kampungbaru-website
+```
 
-## Contributing
+### 2️⃣ Install Dependencies
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+composer install
+```
 
-## Code of Conduct
+If using Node (if frontend assets are present):
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+npm install
+npm run build
+```
 
-## Security Vulnerabilities
+### 3️⃣ Environment Setup
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Copy environment file:
 
-## License
+```
+cp .env.example .env
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Generate application key:
+
+```
+php artisan key:generate
+```
+
+Configure database credentials inside `.env`.
+
+### 4️⃣ Database Migration
+
+```
+php artisan migrate
+```
+
+(Optional if seeder exists)
+
+```
+php artisan db:seed
+```
+
+### 5️⃣ Storage Link
+
+If file upload is enabled:
+
+```
+php artisan storage:link
+```
+
+### 6️⃣ Run Development Server
+
+```
+php artisan serve
+```
+
+Application will be available at:
+
+```
+http://127.0.0.1:8000
+```
+
+## 🐳 Docker Setup (Optional)
+
+Build and start containers:
+
+```
+docker-compose up -d --build
+```
+
+Run migration inside container:
+
+```
+docker exec -it <container_name> php artisan migrate
+```
+
+## 🔐 Environment Variables
+
+Make sure to configure:
+
+- APP_NAME
+- APP_ENV
+- APP_KEY
+- DB_HOST
+- DB_DATABASE
+- DB_USERNAME
+- DB_PASSWORD
+- MAIL settings (if enabled)
+
+⚠️ Never commit `.env` file to version control.
+
+---
+
+## 📂 Project Structure
+
+```
+app/
+bootstrap/
+config/
+database/
+public/
+resources/
+routes/
+storage/
+```
+
+---
+
+## 🌍 Production Deployment
+
+This application is deployed on:
+
+https://kampungbarukel.pareparekota.go.id
+
+Server environment:
+
+- Linux Server
+- PHP 8+
+- Composer
+- MySQL
+- Cloudflare Protection
+
+---
