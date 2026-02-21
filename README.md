@@ -31,6 +31,8 @@ The application is developed using the Laravel framework and follows modern web 
 ![Laravel](https://img.shields.io/badge/Laravel-Framework-FF2D20?logo=laravel&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=white)
 ![Filament](https://img.shields.io/badge/Filament-AdminPanel-F59E0B)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UtilityCSS-06B6D4?logo=tailwindcss&logoColor=white)
+![Alpine.js](https://img.shields.io/badge/Alpine.js-Frontend-8BC0D0?logo=alpine.js&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white)
 ![Cloudflare (DNS & Security Layer)](https://img.shields.io/badge/Cloudflare-Security-F38020?logo=cloudflare&logoColor=white)
 
