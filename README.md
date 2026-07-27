@@ -205,7 +205,7 @@ This application is currently deployed at:
 
 ## 🤝 Contributing / Handover Notes
 
-This project was initially developed by **Alexander Mario Lefta** as part of the **KKN (Kuliah Kerja Nyata)** community service program, in collaboration with the **Kelurahan Kampung Baru** office.
+This project was initially developed by **AML** as part of the **KKN (Kuliah Kerja Nyata)** community service program, in collaboration with the **Kelurahan Kampung Baru** office.
 
 If you are a new contributor continuing this project:
 - Review the `Known Issues` / `Roadmap` section (if provided separately in handover documentation)
