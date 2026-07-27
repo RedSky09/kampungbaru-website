@@ -47,14 +47,14 @@ class SubmissionController extends Controller
                 'success' => true,
                 'code'    => $code,
             ]);
-            
-            } catch (ValidationException $e) {
+
+        } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
                 'message' => 'Validasi gagal',
                 'errors'  => $e->errors(),
             ], 422);
-            } catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             report($e);
 
             return response()->json([
@@ -63,31 +63,27 @@ class SubmissionController extends Controller
             ], 500);
         }
     }
+
     public function track($code)
     {
         $submission = Submission::where('code', $code)->first();
+
+        // menangani kasus submission null, tanpa akses property apapun
         if (! $submission) {
             return response()->json([
-                'success' => true,
-                'data' => [
-                    'code' => $submission->code,
-                    'service_type' => $submission->service_type,
-                    'name' => substr($submission->name, 0, 3) . '*****',
-                    'status' => $submission->status,
-                    'reason' => $submission->rejection_reason,
-                    'created_at' => $submission->created_at->format('d M Y H:i'),
-                ],
-            ]);
-
+                'success' => false,
+                'message' => 'Kode pengajuan tidak ditemukan',
+            ], 404);
         }
-        
+
         return response()->json([
-            'code' => $submission->code,
-            'service_type' => $submission->service_type,
-            'name' => substr($submission->name, 0, 1) . '***',
-            'status' => $submission->status,
-            'reason' => $submission->rejection_reason,
-            'created_at' => $submission->created_at->format('d M Y H:i'),
+            'success' => true,
+            'code'          => $submission->code,
+            'service_type'  => $submission->service_type,
+            'name'          => substr($submission->name, 0, 1) . '***',
+            'status'        => $submission->status,
+            'reason'        => $submission->rejection_reason,
+            'created_at'    => $submission->created_at->format('d M Y H:i'),
         ]);
     }
 }
