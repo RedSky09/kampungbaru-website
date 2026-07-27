@@ -13,8 +13,6 @@ Developed as part of the **KKN (Kuliah Kerja Nyata) Program**, this application 
   <img src="screenshots/homepage.png" width="900">
 </p>
 
-> ⚠️ Make sure the `screenshots/` folder is committed to the repository, otherwise this image will not render.
-
 ---
 
 ## 🚀 Main Features
