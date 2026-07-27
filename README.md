@@ -25,7 +25,6 @@ Developed as part of the **KKN (Kuliah Kerja Nyata) Program**, this application 
   - Surat Keterangan SKCK / Belum Menikah
   - Surat Keterangan Penguburan
 - 🔍 **Submission Tracking** — track application status in real-time using a unique tracking code
-- 📲 **WhatsApp Notifications** — automatic status updates sent via Fonnte API
 - 🛠️ **Admin Dashboard (Filament v4)** — manage submissions, news, and officials data
 - 📁 **File Upload Handling** — multi-document upload with validation
 - 📱 **Responsive UI** — optimized for both mobile and desktop
@@ -159,7 +158,6 @@ Make sure to configure the following in your `.env` file:
 | `DB_DATABASE` | Database name |
 | `DB_USERNAME` | Database username |
 | `DB_PASSWORD` | Database password |
-| `FONNTE_TOKEN` | API token for WhatsApp notifications ([fonnte.com](https://fonnte.com)) |
 | `MAIL_*` | Mail configuration (optional, only if email notifications are enabled) |
 
 ⚠️ **Never commit the `.env` file to version control.** Use `.env.example` as a reference template only.
